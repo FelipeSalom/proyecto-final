@@ -6,11 +6,12 @@ En esta fanpage podran encontrar las fichas de los personajes iniciales,
 asi como la de sus Mobile Suit y Facciones a las cuales pertenecieron.
 
 ### Profesor:
-
+- Maximiliano Cardenas
 ### Tutor Adjunto:
-
+- Damian Laterza
 ### Tutores:
-
+- Joaquín De La Parra
+- Yeison Rodriguez
 ### Herramientas & Tecnologias:
 - Lenguaje de Etiquetas HTML
 - Lenguaje de Estilo CSS
