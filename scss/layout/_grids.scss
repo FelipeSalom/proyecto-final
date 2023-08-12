@@ -1,0 +1,112 @@
+.grid-boody{
+    width: 100%;
+    @include grid(5rem 1fr,19rem 1fr 15.1rem, center, center,
+    "lateral head"
+    "lateral main"
+    "lateral foot");
+    .vertical{
+        display: grid;
+        grid-area: lateral;
+        width: 5rem;
+        height: 100%;
+    }
+    header{
+        width: 100%;
+        height: 19rem;
+        display: grid;
+        grid-area: head;
+        }
+    main{
+            display: grid;
+            grid-area: main;
+            width: 100%;
+        }
+    footer{
+            display: grid;
+            grid-area: foot;
+        }
+}
+@media (max-width: 820px){
+    .grid-boody{
+        width: 100%;
+        @include grid(5rem 1fr,19rem 1fr 25rem, center, center,
+        "lateral head"
+        "lateral main"
+        "lateral foot");
+        .vertical{
+            display: grid;
+            grid-area: lateral;
+            width: 5rem;
+            height: 100%;
+        }
+        header{
+            width: 100%;
+            height: 19rem;
+            display: grid;
+            grid-area: head;
+            }
+        main{
+                display: grid;
+                grid-area: main;
+                width: 100%;
+            }
+        footer{
+                display: grid;
+                grid-area: foot;
+                .grid-footer {
+                    height: 25rem;
+                }
+            }
+    }
+}
+@media (max-width: 620px){
+    .grid-boody{
+        width: 100%;
+        @include grid(5rem 1fr,19rem 1fr 35rem, center, center,
+        "lateral head"
+        "lateral main"
+        "lateral foot");
+        .vertical{
+            grid-area: lateral;
+        }
+        header{
+            grid-area: head;
+            }
+        main{
+                grid-area: main;
+            }
+        footer{
+                display: grid;
+                grid-area: foot;
+                .grid-footer {
+                    height: 35rem;
+                }
+            }
+    }
+}
+@media (max-width: 450px){
+    .grid-boody{
+        width: 100%;
+        @include grid(5rem 1fr,19rem 1fr 45rem, center, center,
+        "lateral head"
+        "lateral main"
+        "lateral foot");
+        .vertical{
+            grid-area: lateral;
+        }
+        header{
+            grid-area: head;
+            }
+        main{
+                grid-area: main;
+            }
+        footer{
+                display: grid;
+                grid-area: foot;
+                .grid-footer {
+                    height: 45rem;
+                }
+            }
+    }
+}
+

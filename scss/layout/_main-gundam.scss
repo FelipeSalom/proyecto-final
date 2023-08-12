@@ -1,0 +1,368 @@
+.main-gundam{
+    @include flex(column,wrap,center,center);
+    h1 {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+.gundam-uno{
+    position: relative;
+    width: 60rem;
+    height: 60rem;
+    margin-bottom: 5rem;
+    background-color: $backgraundColorSecundario;
+    @include grid(repeat(3, 1fr),35rem 25rem,center,center,
+    "resumen resumen img"
+    "resumen2 ficha ficha");
+    img{
+        z-index: 1;
+        grid-area: img;
+        position: absolute;
+        width: 24rem;
+        height: 35rem;
+        top: 12.5rem;
+        right: 0rem;
+    }
+    .resumen {
+        grid-area: resumen;
+        color: $colorTexPrincipal;
+        width: 40rem;
+        height: 100%;
+        @include flex(row, wrap,center,center);
+        p {
+            width: 38rem;
+            font-size: 1rem;
+        }
+    }
+    .resumen-dos{
+        grid-area: resumen2;
+        color: $colorTexPrincipal;
+        p {
+            padding: 1rem;
+        }
+    }
+    .table-ficha{
+        grid-area: ficha;
+        background-color: #D9D9D9;
+        width: 38rem;
+        height: 23rem;
+        margin: 1rem;
+        @include grid(repeat(2, 1fr),10rem 13rem,center,center,"uno ." "uno dos");
+        li{list-style: none;
+        margin-bottom: .3125rem;}
+        .columna-uno{
+            grid-area: uno;
+            height: 23rem;
+            padding: .3125rem;
+            .encabezado{
+                padding: inherit;
+                text-align: center;
+                background-color: #F2B035; 
+                border: 1px solid #000;
+            }
+        }
+        .columna-dos{
+            grid-area: dos;
+            padding: .3125rem;
+        }
+    }
+}
+.gundam-dos{
+    position: relative;
+    width: 60rem;
+    height: 50rem;
+    background-color: $backgraundColorSecundario;
+    margin-bottom: 5rem;
+    @include grid(20rem 20rem 20rem,25rem 25rem,center,center,
+    "img resumen resumen"
+    "ficha ficha resumen2");
+    img{
+        z-index: 1;
+        position: absolute;
+        top: 1rem;
+        width: 20rem;
+        height: 35rem;
+    }
+    .resumen {
+        grid-area: resumen;
+        color: $colorTexPrincipal;
+        width: 40rem;
+        height: 100%;
+        @include flex(row, wrap,center,center);
+        p {
+            width: 38rem;
+            font-size: 1rem;
+        }
+    }
+    .resumen-dos{
+        grid-area: resumen2;
+        color: $colorTexPrincipal;
+        p {
+            padding: 1rem;
+        }
+    }
+    .table-ficha{
+        grid-area: ficha;
+        background-color: #D9D9D9;
+        width: 38rem;
+        height: 23rem;
+        margin: 1rem;
+        @include grid(repeat(2, 1fr),10rem 13rem,center,center,". uno" "dos uno");
+        li{list-style: none;
+        margin-bottom: .3125rem;}
+        .columna-uno{
+            grid-area: uno;
+            height: 23rem;
+            padding: .3125rem;
+            .encabezado{
+                padding: inherit;
+                text-align: center;
+                background-color: #F2B035; 
+                border: 1px solid #000;
+            }
+        }
+        .columna-dos{
+            padding: .3125rem;
+            grid-area: dos;
+        }
+    }
+}
+
+@media (max-width: 1040px){
+    .gundam-uno{
+        width: 40rem;
+        height: 80rem;
+        @include grid(50% 50%,30rem 13rem 37rem,center,center,
+        "resumen resumen"
+        "resumen2 resumen2" 
+        "ficha img");
+        .resumen{
+            grid-area: resumen;
+        }
+        .resumen-dos{
+            grid-area: resumen2;
+        }
+        img{
+            grid-area: img;
+            top: 0rem;
+        }
+        .table-ficha{
+            grid-area: ficha;
+            background-color: #D9D9D9;
+            width: 20rem;
+            height: 35rem;
+            margin: 1rem;
+            @include grid(100%,repeat(2, 1fr),center,center,"uno" "dos");
+            .columna-uno{
+                grid-area: uno;
+            }
+            .columna-dos{
+                grid-area: dos;
+            }
+        }
+    }
+    .gundam-dos{
+        width: 40rem;
+        height: 72rem;
+        @include grid(45% 55%,25rem 10rem 37rem,center,center,
+        "resumen resumen"
+        "resumen2 resumen2" 
+        "img ficha");
+        .resumen{
+            grid-area: resumen;
+        }
+        .resumen-dos{
+            grid-area: resumen2;
+        }
+        img{
+            grid-area: img;
+            top: 0rem;
+        }
+        .table-ficha{
+            grid-area: ficha;
+            background-color: #D9D9D9;
+            width: 20rem;
+            height: 35rem;
+            margin: 1rem;
+            text-align: right;
+            @include grid(100%,repeat(2, 1fr),center,center,"uno" "dos");
+            .columna-uno{
+                grid-area: uno;
+            }
+            .columna-dos{
+                grid-area: dos;
+            }
+        }
+    }
+}
+@media (max-width: 720px){
+    .gundam-uno{
+        width: 16.75rem;
+        height: 172rem;
+        @include grid(100%,75.875rem 28.25rem 27rem 38rem,center,center,
+        "resumen"
+        "resumen2"
+        "img"
+        "ficha");
+        .resumen {
+            margin-top: 1rem;
+            grid-area: resumen;
+            width: initial;
+            height: initial;
+            @include flex(row, wrap,center,center);
+            h3 {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+            p {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+        .resumen-dos{
+            grid-area: resumen2;
+            p{
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+        img{
+            width: 16rem;
+            height: 27rem;
+            position: inherit;
+            grid-area: img;
+        }
+        .table-ficha{
+            grid-area: ficha;
+            background-color: #D9D9D9;
+            width: 16.75rem;
+            height: 38rem;
+            margin: 0;
+            @include grid(100%,repeat(2, 1fr),center,center,"uno" "dos");
+            .columna-uno{
+                grid-area: uno;
+            }
+            .columna-dos{
+                grid-area: dos;
+            }
+        }
+    }
+    .gundam-dos{
+        width: 16.75rem;
+        height: 145rem;
+        @include grid(100%,49.1rem 25.75rem 27rem 41rem,center,center,
+        "resumen"
+        "resumen2"
+        "img"
+        "ficha");
+        .resumen {
+            margin-top: 1rem;
+            grid-area: resumen;
+            width: initial;
+            height: initial;
+            @include flex(row, wrap,center,center);
+            h3 {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+            p {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+        .resumen-dos{
+            grid-area: resumen2;
+            p{
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+        img{
+            width: 16rem;
+            height: 27rem;
+            position: inherit;
+            grid-area: img;
+        }
+        .table-ficha{
+            grid-area: ficha;
+            background-color: #D9D9D9;
+            width: 16.75rem;
+            height: 41rem;
+            margin: 0;
+            @include grid(100%,repeat(2, 1fr),center,center,"uno" "dos");
+            .columna-uno{
+                grid-area: uno;
+            }
+            .columna-dos{
+                grid-area: dos;
+            }
+        }
+    }
+}
+@media (max-width: 400px){
+    .gundam-uno{
+        width: 15rem;
+        height: 185rem;
+        @include grid(100%,83.4375rem 32rem 27rem 41.625rem,center,center,
+        "resumen"
+        "resumen2"
+        "img"
+        "ficha");
+        .resumen {
+            margin-top: 0;
+            grid-area: resumen;
+        }
+        .resumen-dos{
+            grid-area: resumen2;
+        }
+        img{
+            width: 15rem;
+            grid-area: img;
+        }
+        .table-ficha{
+            width: 15rem;
+            height: 41.625rem;
+            grid-area: ficha;
+            @include grid(100%,26rem 15.625rem,center,center,"uno" "dos");
+            .columna-uno{
+                height: 26rem;
+                grid-area: uno;
+            }
+            .columna-dos{
+                grid-area: dos;
+            }
+        }
+    }
+    .gundam-dos{
+        width: 15rem;
+        height: 157rem;
+        @include grid(100%,57.1875rem 30.75rem 27rem 41.625rem,center,center,
+        "resumen"
+        "resumen2"
+        "img"
+        "ficha");
+        .resumen {
+            margin-top: 0;
+            grid-area: resumen;
+        }
+        .resumen-dos{
+            grid-area: resumen2;
+        }
+        img{
+            width: 15rem;
+            grid-area: img;
+        }
+        .table-ficha{
+            width: 15rem;
+            grid-area: ficha;
+            @include grid(100%,26rem 15.625rem,center,center,"uno" "dos");
+            .columna-uno{
+                height: 26rem;
+                grid-area: uno;
+            }
+            .columna-dos{
+                grid-area: dos;
+            }
+        }
+    }
+}

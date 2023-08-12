@@ -1,0 +1,150 @@
+.grid-footer {
+    height: 15.1rem;
+    background: $backgraundColor;
+    font-size: 1rem;
+    @include grid (repeat(2, 1fr),15.1rem,center,center, "marcas autor");
+    .footer-marcas {
+        grid-area: marcas;
+        @include grid (100%,repeat(2, 50%),center,center,
+        "imagen" 
+        "texto");
+        div {
+            grid-area: imagen;
+            margin-bottom: 1rem;
+            @include flex (row, wrap,center,center);
+            .bandai {
+                margin-right: 1rem;
+                width: 5rem;
+                height: 5rem;
+            }
+            .namco {
+                margin-right: 1rem;
+                width: 7rem;
+                height: 5rem;
+            }
+            .sunrise {
+                margin-right: 1rem;
+                width: 8rem;
+                height: 5rem;
+            }
+        }
+        p{
+            grid-area: texto;
+            text-align: center;
+            color: $colorTexPrincipal;
+            size: 1.25rem;
+        }
+    }
+    .autor {
+        @include grid (repeat(2, 1fr), 15.1rem, center,center, "texto imagen");
+        grid-area: autor;
+        text-align: center;
+        .Tomino{
+            grid-area: imagen;
+            img{
+                width: 7rem;
+                height: 10rem;
+            }
+        }
+        p {
+            grid-area: texto;
+            text-align: center;
+            color: $colorTexPrincipal;
+        }
+    }
+}
+@media (max-width: 820px){
+    .grid-footer {
+        @include grid (repeat(2, 1fr),25rem,center,center, "marcas autor");
+        .footer-marcas {
+            grid-area: marcas;
+            @include grid (100%,repeat(2, 50%),center,center,
+            "imagen" 
+            "texto");
+            div {
+                grid-area: imagen;
+                margin-bottom: 1rem;
+                @include flex (row, wrap,center,center);
+            }
+            p{
+                grid-area: texto;
+                text-align: center;
+            }
+        }
+        .autor {
+            @include grid (repeat(2, 1fr), 25rem, center,center, "texto imagen");
+            grid-area: autor;
+            text-align: center;
+            .Tomino{
+                grid-area: imagen;
+                img{
+                    width: 7rem;
+                    height: 10rem;
+                }
+            }
+            p {
+                grid-area: texto;
+            }
+        }
+    }
+}
+@media (max-width: 620px){
+    .grid-footer {
+        @include grid (100%,repeat(2, 1fr),center,center, "autor" "marcas");
+        .footer-marcas {
+            grid-area: marcas;
+            @include grid (100%,repeat(2, 50%),center,center,
+            "imagen" 
+            "texto");
+            div {
+                grid-area: imagen;
+            }
+            p{
+                grid-area: texto;
+            }
+        }
+        .autor {
+            @include grid (100%,repeat(2, 1fr), center,center, "imagen" "texto");
+            grid-area: autor;
+            .Tomino{
+                grid-area: imagen;
+                img{
+                    margin-top: 1rem;
+                }
+            }
+            p {
+                grid-area: texto;
+            }
+        }
+    }
+}
+@media (max-width: 450px){
+    .grid-footer {
+        @include grid (100%,repeat(2, 1fr),center,center, "autor" "marcas");
+        .footer-marcas {
+            grid-area: marcas;
+            @include grid (100%,repeat(2, 50%),center,center,
+            "imagen" 
+            "texto");
+            div {
+                grid-area: imagen;
+            }
+            p{
+                grid-area: texto;
+            }
+        }
+        .autor {
+            @include grid (100%,repeat(2, 1fr), center,center, "imagen" "texto");
+            grid-area: autor;
+            .Tomino{
+                grid-area: imagen;
+                img{
+                    margin-top: 1rem;
+                }
+            }
+            p {
+                grid-area: texto;
+            }
+        }
+    }
+}
